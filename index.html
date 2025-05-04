@@ -426,10 +426,9 @@
     footer {
       background: var(--darker);
       color: var(--text-light);
-      padding: 4rem 2rem;
+      padding: 2rem 2rem;
       text-align: center;
       position: relative;
-      overflow: hidden;
     }
 
     body.light-mode footer {
@@ -440,8 +439,6 @@
     .footer-container {
       max-width: 1200px;
       margin: 0 auto;
-      position: relative;
-      z-index: 2;
     }
 
     .footer-logo {
@@ -466,7 +463,7 @@
       justify-content: center;
       flex-wrap: wrap;
       gap: 2rem;
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
     }
 
     .footer-link {
@@ -486,39 +483,8 @@
 
     .footer-info {
       font-size: 0.9rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
       line-height: 1.8;
-    }
-
-    .footer-social {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      margin-bottom: 2rem;
-    }
-
-    .social-icon {
-      width: 45px;
-      height: 45px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.1);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--text-dark);
-      font-size: 1.2rem;
-      transition: var(--transition);
-    }
-
-    body.light-mode .social-icon {
-      background: rgba(0, 0, 0, 0.05);
-      color: var(--text-dark-light-mode);
-    }
-
-    .social-icon:hover {
-      background: var(--primary);
-      color: white;
-      transform: translateY(-3px);
     }
 
     .footer-copyright {
@@ -527,9 +493,10 @@
     }
 
     /* Buttons */
-    .report-btn, .back-to-top {
+    .back-to-top {
       position: fixed;
       bottom: 30px;
+      right: 30px;
       background: var(--gradient);
       color: white;
       width: 60px;
@@ -545,18 +512,10 @@
       z-index: 99;
       border: none;
       cursor: pointer;
-    }
-
-    .report-btn {
-      right: 30px;
-    }
-
-    .back-to-top {
-      right: 100px;
       display: none;
     }
 
-    .report-btn:hover, .back-to-top:hover {
+    .back-to-top:hover {
       transform: translateY(-5px) scale(1.1);
       box-shadow: 0 12px 30px rgba(108, 92, 231, 0.4);
     }
@@ -634,14 +593,10 @@
         gap: 1rem;
       }
       
-      .report-btn, .back-to-top {
+      .back-to-top {
         width: 50px;
         height: 50px;
         font-size: 1.3rem;
-      }
-      
-      .back-to-top {
-        right: 90px;
       }
     }
 
@@ -662,13 +617,9 @@
         height: 220px;
       }
       
-      .report-btn, .back-to-top {
+      .back-to-top {
         bottom: 20px;
         right: 20px;
-      }
-      
-      .back-to-top {
-        right: 80px;
       }
     }
 
@@ -802,42 +753,17 @@
         <a href="#" class="footer-link">Contato</a>
       </div>
       
-      <div class="footer-social">
-        <a href="#" class="social-icon" aria-label="Facebook">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="#" class="social-icon" aria-label="Twitter">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a href="#" class="social-icon" aria-label="Instagram">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="#" class="social-icon" aria-label="WhatsApp">
-          <i class="fab fa-whatsapp"></i>
-        </a>
-      </div>
-      
       <div class="footer-info">
         <p>© 2025 Nice Games. Todos os direitos reservados.</p>
         <p>Dono: Supremo ph | Designer: Supremo ph e colaboradores</p>
         <p>Responsáveis pelos links: Supremo ph, Albino modz, Samuel7xzz e outros</p>
-        <p>Nota: Utilizamos encurtadores de links para manter o site ativo. Reporte problemas via WhatsApp.</p>
       </div>
       
       <div class="footer-copyright">
-        <p>Este site não armazena nenhum arquivo em seus servidores. Todos os links são fornecidos por terceiros.</p>
+        <p>Nota: Utilizamos encurtadores de links para manter o site ativo.</p>
       </div>
     </div>
   </footer>
-
-  <!-- Report Button -->
-  <button
-    class="report-btn"
-    onclick="window.open('https://wa.me/+5515974015008', '_blank')"
-    aria-label="Reportar erro via WhatsApp"
-  >
-    <i class="fas fa-bug" aria-hidden="true"></i>
-  </button>
 
   <!-- Back to Top Button -->
   <button
